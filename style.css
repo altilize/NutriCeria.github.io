@@ -416,3 +416,43 @@ footer p {
     .section-title { font-size: 2rem; }
     .features-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== HALAMAN FITUR & CANVA EMBED ===== */
+.feature-display {
+    padding: 60px 0;
+    background: var(--light-text);
+}
+
+.canva-container {
+    max-width: 900px; /* Atur lebar maksimal presentasi */
+    margin: 2rem auto; /* Posisikan di tengah */
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+}
+
+/* Tambahkan ini di akhir file style.css Anda */
+
+.canva-container {
+    padding: 20px; /* Memberi bingkai di dalam container */
+    background: var(--light-text);
+}
+
+.canva-embed-wrapper {
+    position: relative;
+    /* Rasio aspek 9:16 vertikal (16/9 * 100 = 177.78%) */
+    padding-top: 177.7778%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Sudut dalam yang sedikit lebih halus */
+}
+
+.canva-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
