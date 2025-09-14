@@ -18,7 +18,7 @@
                 <a href="index.html" class="logo">
                     <img src="images/Logo.png" alt="NutriCeria Logo">
                 </a>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="berita.html">Berita</a></li>
                     <li><a href="fitur.html">Fitur</a></li>
@@ -26,7 +26,7 @@
                     <li><a href="#">Tentang Kami</a></li>
                 </ul>
                 <a href="#" class="btn btn-primary nav-btn">Hubungi Kami</a>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -39,7 +39,7 @@
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
-                    <span class="hero-tagline">Gizi Kuat, Anak Ceria</span>
+                    <span class="hero-tagline">Gizi Kuat, Anak Hebat</span>
                     <h1>Platform untuk Masa Depan Anak Indonesia Bebas Stunting</h1>
                     <p>Kami menyajikan data akurat, resep bergizi, dan informasi terpercaya untuk mendukung para Ibu dan pegiat gizi di seluruh Indonesia.</p>
                     <a href="fitur.html" class="btn btn-primary">Jelajahi Fitur Kami</a>
@@ -138,7 +138,7 @@
         <div class="container">
             <div class="footer-content">
                 <img src="images/Logo.png" alt="NutriCeria Logo" class="footer-logo">
-                <h3>Gizi Kuat, Anak Ceria</h3>
+                <h3>Gizi Kuat, Anak Hebat</h3>
                 <p>Bersama-sama, kita wujudkan generasi Indonesia yang sehat dan berprestasi.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -153,5 +153,13 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('nav-active');
+    });
+    </script>
 </body>
 </html>
