@@ -456,3 +456,90 @@ footer p {
     height: 100%;
     border: 0;
 }
+
+/* Tambahkan ini di style.css */
+
+/* ===== CTA DOWNLOAD SECTION ===== */
+.cta-download {
+    background: var(--bg-light-gray);
+}
+
+.cta-download-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cta-image {
+    flex: 1;
+}
+
+.cta-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    transform: rotate(-4deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-image img:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.cta-text {
+    flex: 1;
+}
+
+.cta-text .section-title,
+.cta-text .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.download-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Agar tombol turun ke bawah di layar kecil */
+}
+
+.btn-download {
+    text-decoration: none;
+    background: var(--dark-text);
+    color: var(--light-text);
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.2);
+}
+
+.btn-download i {
+    font-size: 2.5rem; /* Ukuran ikon Apple & Google Play */
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.btn-text span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-text strong {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
