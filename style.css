@@ -1,0 +1,325 @@
+/* ===== PENGATURAN DASAR & VARIABEL WARNA ===== */
+:root {
+    --primary-orange: #E85B25;
+    --accent-yellow: #FDD231;
+    --natural-green: #70A02C;
+    --dark-text: #2c3e50;
+    --light-text: #FFFFFF;
+    --body-text: #596275;
+    --bg-light-gray: #f7f9fc;
+    --border-color: #e8eaf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--body-text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 4rem auto;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary-orange);
+    color: var(--light-text);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(232, 91, 37, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-orange);
+    border: 2px solid var(--primary-orange);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-orange);
+    color: var(--light-text);
+    transform: translateY(-3px);
+}
+
+/* ===== HEADER BARU - LEBIH MENONJOL ===== */
+header {
+    background: var(--light-text);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 65px; /* LOGO DIPERBESAR */
+    transition: transform 0.3s ease;
+}
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-orange);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hamburger { display: none; }
+.nav-btn { display: inline-block; }
+
+
+/* ===== HERO BARU - SPLIT LAYOUT ===== */
+.hero {
+    padding: 60px 0;
+    background: var(--light-text);
+}
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-text {
+    flex: 1;
+}
+.hero-image {
+    flex: 1;
+}
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+.hero-tagline {
+    font-weight: 600;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+    display: block;
+}
+.hero-text h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== FEATURES BARU - MODERN CARDS ===== */
+.features {
+    background: var(--bg-light-gray);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.feature-card {
+    background: var(--light-text);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    border-color: var(--primary-orange);
+}
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px auto;
+    background: var(--primary-orange);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.feature-card h3 {
+    font-size: 1.4rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+/* ===== IMPACT SECTION - ASIMETRIS ===== */
+.impact-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.impact-image {
+    flex: 1;
+}
+.impact-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+.impact-text {
+    flex: 1;
+}
+.impact-text .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+.stats-grid {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+.stat-item h4 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+}
+
+/* ===== FOOTER BARU - FOKUS PADA LOGO ===== */
+footer {
+    background: var(--dark-text);
+    color: #aeb8c4;
+    padding: 80px 0 30px 0;
+    text-align: center;
+}
+.footer-logo {
+    height: 80px; /* LOGO DIPERBESAR */
+    margin-bottom: 1rem;
+}
+footer h3 {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+footer p {
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+}
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--primary-orange);
+    transform: translateY(-5px);
+}
+.footer-bottom {
+    border-top: 1px solid #4a5568;
+    padding-top: 30px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* ===== EFEK FADE-IN SAAT SCROLL ===== */
+.features, .impact {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.features.visible, .impact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+    .hero-container, .impact-container {
+        flex-direction: column;
+    }
+    .hero-text { text-align: center; }
+    .impact-text { order: -1; text-align: center; }
+    .impact-text .section-title { text-align: center; }
+    .stats-grid { justify-content: center; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .nav-links, .nav-btn { display: none; }
+    .hamburger { display: block; }
+    .hamburger span {
+        display: block; width: 25px; height: 3px;
+        margin: 5px; background: var(--dark-text);
+    }
+    .hero-text h1 { font-size: 2.5rem; }
+    .section-title { font-size: 2rem; }
+    .features-grid { grid-template-columns: 1fr; }
+}
